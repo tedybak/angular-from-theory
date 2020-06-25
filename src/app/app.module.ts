@@ -3,18 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
- import { FeatureModule } from './features/feature.module';
+import { FeatureModule } from './features/feature.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FeatureModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, FeatureModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
