@@ -4,7 +4,6 @@ import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Route[] = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'search', component: SearchComponent },
   { path: 'home', component: HomeComponent },
 ];
