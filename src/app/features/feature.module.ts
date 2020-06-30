@@ -7,6 +7,7 @@ import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FormComponent,
     HomeComponent,
+    BlogComponent,
   ],
   imports: [CommonModule, FeatureRoutingModule, FormsModule, HttpClientModule],
   exports: [NavbarComponent],
