@@ -6,6 +6,7 @@ import {BlogComponent} from "./blog/blog.component";
 
 const routes: Route[] = [
   { path: 'search', component: SearchComponent },
+  {path: 'search/:term', component: SearchComponent},
   { path: 'home', component: HomeComponent },
   {path: 'blog/:id', component: BlogComponent},
   {path: '**', component: HomeComponent},

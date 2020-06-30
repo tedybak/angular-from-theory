@@ -1,6 +1,6 @@
 import { ItunesService } from './../../services/itunes.service';
 import {
-  Component,
+  Component, Input,
   OnInit,
   ɵCompiler_compileModuleSync__POST_R3__,
 } from '@angular/core';
@@ -15,14 +15,14 @@ import { SearchItem } from 'src/app/models/searchItem.model';
 export class FormComponent implements OnInit {
   constructor(private itunesService: ItunesService) {}
 
-  data: SearchItem[] = [];
+  @Input() data: SearchItem[] = [];
 
   ngOnInit(): void {}
 
   onSubmit(formulario) {
     this.itunesService.getArtistCollection(formulario).subscribe((data) => {
       this.data = data;
-      console.log(data);
+      console.log(formulario);
     });
   }
 }

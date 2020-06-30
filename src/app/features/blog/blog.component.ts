@@ -12,9 +12,9 @@ export class BlogComponent implements OnInit {
   constructor(private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activeRoute.params.subscribe( (id) =>{
-      this.id = parseInt(id.params['id'])
-    })
+    // this.activeRoute.paramMap.subscribe( (id) =>{
+    //   this.id = parseInt(id.params['id'])
+    // })
   }
 
 }
