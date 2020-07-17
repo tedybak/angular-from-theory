@@ -13,8 +13,8 @@ export class ItunesService {
 
   constructor(private http: HttpClient) {}
 
-  getArtistCollection(search: string) {
-    let artist = search.search;
+  getArtistCollection(search: Object) {
+    let artist = search['search'];
     let apiURL = `${this.apiRoot}?term=${artist}&media=music&limit=20`;
 
     return this.http.get<SearchItem>(`${apiURL}`).pipe(
@@ -32,4 +32,4 @@ export class ItunesService {
       })
     );
   }
-} //clase 
+} //clase

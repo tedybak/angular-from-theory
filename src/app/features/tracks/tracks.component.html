@@ -1,1 +1,25 @@
-<p>tracks works!</p>
+<table class="table table-dark" *ngIf="data.length > 0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Art Work</th>
+      <th scope="col">Art Work 30</th>
+      <th scope="col">Country</th>
+      <th scope="col">Kind</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of data; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <th scope="row">
+        <a class="anchor" href="{{ item['artistViewUrl'] }}">{{
+          item["collectionCensoredName"]
+        }}</a>
+      </th>
+      <th scope="row"><img src="{{ item['artworkUrl30'] }}" /></th>
+      <th scope="row">{{ item["country"] }}</th>
+      <th scope="row">{{ item["kind"] }}</th>
+    </tr>
+  </tbody>
+</table>
