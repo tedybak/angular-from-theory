@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="orm-group col-lg-6">
+        <a class="form-control btn btn-success mt-4" [routerLink]="['tracks']" [queryParams]="{search: artist}" >Tracks </a>
+    </div>
+    <div class="form-group col-lg-6">
+        <a class="form-control btn btn-success mt-4" [routerLink]="['albums']" [queryParams]="{search:artist}" >Albums </a>
+    </div>
+</div>
+
+{{artist}}
+<router-outlet></router-outlet>

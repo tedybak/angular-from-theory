@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ItunesService } from './../../services/itunes.service';
 import {
   Component,
@@ -13,16 +14,15 @@ import { SearchItem } from 'src/app/models/searchItem.model';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  constructor(private itunesService: ItunesService) {}
+  constructor(private router:Router) {}
 
-  data: SearchItem[] = [];
+  
 
   ngOnInit(): void {}
 
   onSubmit(formulario) {
-    this.itunesService.getArtistCollection(formulario).subscribe((data) => {
-      this.data = data;
-      console.log(data);
-    });
+    const artist = formulario.search;
+    this.router.navigate(['artist'], {queryParams : { 'search': artist }} );
+
   }
 }
