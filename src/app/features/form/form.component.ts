@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { ItunesService } from './../../services/itunes.service';
 import {
-  Component,
+  Component, Input,
   OnInit,
   ɵCompiler_compileModuleSync__POST_R3__,
 } from '@angular/core';
@@ -16,13 +16,17 @@ import { SearchItem } from 'src/app/models/searchItem.model';
 export class FormComponent implements OnInit {
   constructor(private router:Router) {}
 
+ 
   
+ 
 
   ngOnInit(): void {}
 
   onSubmit(formulario) {
+ 
     const artist = formulario.search;
     this.router.navigate(['artist'], {queryParams : { 'search': artist }} );
 
+ 
   }
 }

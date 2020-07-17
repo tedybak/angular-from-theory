@@ -7,9 +7,10 @@ import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { TracksComponent } from './tracks/tracks.component';
+ import { TracksComponent } from './tracks/tracks.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { ArtistComponent } from './artist/artist.component';
+ 
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { ArtistComponent } from './artist/artist.component';
     NavbarComponent,
     FormComponent,
     HomeComponent,
-    TracksComponent,
+     TracksComponent,
     AlbumsComponent,
-    ArtistComponent,
+    ArtistComponent
   ],
+ 
   imports: [CommonModule, FeatureRoutingModule, FormsModule, HttpClientModule],
   exports: [NavbarComponent],
 })
