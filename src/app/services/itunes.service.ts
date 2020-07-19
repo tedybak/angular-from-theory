@@ -13,9 +13,10 @@ export class ItunesService {
 
   constructor(private http: HttpClient) {}
 
-  getArtistCollection(search: Object) {
-    let artist = search['search'];
+  getArtistCollection(search: string) {
+    let artist = search;
     let apiURL = `${this.apiRoot}?term=${artist}&media=music&limit=20`;
+    console.log(apiURL);
 
     return this.http.get<SearchItem>(`${apiURL}`).pipe(
       map((resp) => {

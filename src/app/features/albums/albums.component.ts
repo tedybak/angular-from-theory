@@ -11,20 +11,20 @@ import { ItunesService } from 'src/app/services/itunes.service';
 export class AlbumsComponent implements OnInit {
   data: SearchItem[] = [];
   artist: any;
+  objeto: string = null;
 
-  objeto: Object = {
-    search: null,
-    entity: 'album',
-  };
+  montado: string;
 
   constructor(private route: ActivatedRoute, private itunes: ItunesService) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.objeto['search'] = params['search'];
+      this.objeto = params['search'];
     });
 
-    this.itunes.getArtistCollection(this.objeto).subscribe((datos) => {
+    this.montado = this.objeto + '&entity=album';
+
+    this.itunes.getArtistCollection(this.montado).subscribe((datos) => {
       this.data = datos;
     });
   }

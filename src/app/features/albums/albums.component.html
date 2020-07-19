@@ -3,9 +3,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Art Work</th>
-      <th scope="col">Art Work 30</th>
       <th scope="col">Country</th>
-      <th scope="col">Kind</th>
     </tr>
   </thead>
 
@@ -17,11 +15,8 @@
           item["collectionCensoredName"]
         }}</a>
       </th>
-      <th scope="row">
-        <img src="{{ item['artworkUrl30'] }}" width="65px" height="65px" />
-      </th>
+
       <th scope="row">{{ item["country"] }}</th>
-      <th scope="row">{{ item["kind"] }}</th>
     </tr>
   </tbody>
 </table>

@@ -12,15 +12,13 @@ export class TracksComponent implements OnInit {
   data: SearchItem[] = [];
   artist: any;
 
-  objeto: Object = {
-    search: null,
-  };
+  objeto: string;
 
   constructor(private route: ActivatedRoute, private itunes: ItunesService) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.objeto['search'] = params['search'];
+      this.objeto = params['search'];
     });
 
     this.itunes.getArtistCollection(this.objeto).subscribe((datos) => {
