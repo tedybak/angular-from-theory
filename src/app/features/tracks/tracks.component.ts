@@ -21,6 +21,8 @@ export class TracksComponent implements OnInit {
       this.objeto = params['search'];
     });
 
+    this.objeto = this.objeto + '&entity=song';
+
     this.itunes.getArtistCollection(this.objeto).subscribe((datos) => {
       this.data = datos;
     });

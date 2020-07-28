@@ -1,11 +1,6 @@
 import { Router } from '@angular/router';
 import { ItunesService } from './../../services/itunes.service';
-import {
-  Component,
-  Input,
-  OnInit,
-  ɵCompiler_compileModuleSync__POST_R3__,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Form } from '@angular/forms';
 import { SearchItem } from 'src/app/models/searchItem.model';
 
